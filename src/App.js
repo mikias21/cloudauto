@@ -1,8 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
+
+// Pages
+import LandingPage from "./pages/Landing";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+      <LandingPage />
+    </BrowserRouter>
   );
 }
 

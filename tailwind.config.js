@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        popins: ['Poppins', 'sans-serif'],
+        railway: ['Raleway', 'sans-serif'],
+        satisfy: ['Satisfy', 'cursive'],
+        kaushan: ['Kaushan Script', 'cursive'],
+      }
+    },
   },
   plugins: [],
 }
