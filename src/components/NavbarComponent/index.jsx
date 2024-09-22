@@ -15,12 +15,10 @@ const NavbarComponent = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center bg-transparent hover:bg-[#111] bg-gradient-to-b from-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
-        {/* Logo */}
         <div className="text-white text-2xl font-bold font-satisfy">
           Cloud Auto
         </div>
 
-        {/* Links in center for larger screens */}
         <div className="hidden md:flex flex-grow justify-center space-x-8">
           <Link
             to="/"
@@ -42,7 +40,6 @@ const NavbarComponent = () => {
           </Link>
         </div>
 
-        {/* Icons in the right for larger screens */}
         <div className="hidden md:flex space-x-4">
           <Link
             to="/help"
@@ -58,7 +55,6 @@ const NavbarComponent = () => {
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
         <div className="-mr-2 flex md:hidden">
           <button
             onClick={toggleMenu}
@@ -92,7 +88,6 @@ const NavbarComponent = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
