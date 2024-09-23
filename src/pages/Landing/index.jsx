@@ -2,6 +2,7 @@
 import HeroComponent from "../../components/HeroComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import AboutUsComponet from "../../components/AboutUsComponent";
+import StoriesComponent from "../../components/StoriesComponent";
 import LocationStoreComponent from "../../components/LocationStoreComponent";
 import LandingPageSliderComponent from "../../components/LandingPageSliderComponent";
 
@@ -13,6 +14,7 @@ const LandingPage = () => {
             <AboutUsComponet />
             <LocationStoreComponent />
             <LandingPageSliderComponent />
+            <StoriesComponent />
         </div>
     );
 }
