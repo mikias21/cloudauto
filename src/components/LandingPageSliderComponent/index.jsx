@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'; // Importing icons
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
+import { images } from '../../data/slider';
 
 const LandingPageSliderComponent = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    
-    const images = [
-        { src: "/images/slider1.jpg", description: "This is car 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." },
-        { src: "/images/slider2.jpg", description: "This is car 2. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed." },
-        { src: "/images/slider3.jpg", description: "This is car 3. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam." },
-        { src: "/images/slider4.jpg", description: "This is car 4. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor." },
-    ];
 
     const goToNextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
