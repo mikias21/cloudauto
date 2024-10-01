@@ -1,6 +1,6 @@
 const SendOfferComponent = () => {
     return (
-        <div className="bg-[#FFF7ED] w-full py-20 px-8 sm:px-16 lg:px-32 mt-10">
+        <div className="bg-[#FFF7ED] w-full py-20 px-8 sm:px-16 lg:px-32">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
                 <div className="text-left lg:w-1/2 mb-8 lg:mb-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight font-popins">

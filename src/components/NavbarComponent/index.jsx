@@ -14,11 +14,11 @@ const NavbarComponent = () => {
   };
 
   const shopSublinks = [
-    { name: "EV", image: "/images/ev1.jpg" },
-    { name: "SUV", image: "/images/suv1.jpg" },
-    { name: "Truck", image: "/images/truck1.jpg" },
-    { name: "Sedan", image: "/images/sedan1.jpg" },
-    { name: "Hybrid", image: "/images/hybrid1.jpg" },
+    { name: "EV", image: "/images/webp/ev1.webp" },
+    { name: "SUV", image: "/images/webp/suv1.webp" },
+    { name: "Truck", image: "/images/webp/truck1.webp" },
+    { name: "Sedan", image: "/images/webp/sedan1.webp" },
+    { name: "Hybrid", image: "/images/webp/hybrid1.webp" },
   ];
 
   return (
@@ -44,7 +44,7 @@ const NavbarComponent = () => {
               onMouseLeave={() => setIsShopHovered(false)}
             >
               <Link
-                to="/shop"
+                to="#"
                 className="text-gray-300 hover:text-white text-sm transition-colors duration-200 ease-in-out font-railway font-bold"
               >
                 Shop
