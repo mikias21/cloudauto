@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 // Icons
 import { MdLanguage } from "react-icons/md";
-import { IoIosHelpCircleOutline } from "react-icons/io";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,10 +73,18 @@ const NavbarComponent = () => {
             </div>
             <div>
               <Link
-                to="/experience"
+                to="/about"
                 className="text-gray-300 hover:text-white text-sm transition-colors duration-200 ease-in-out font-railway font-bold"
               >
-                Experience
+                About
+              </Link>
+            </div>
+            <div>
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white text-sm transition-colors duration-200 ease-in-out font-railway font-bold"
+              >
+                Contact
               </Link>
             </div>
           </div>
@@ -88,12 +95,6 @@ const NavbarComponent = () => {
               className="text-gray-300 hover:text-white transition-colors duration-200 ease-in-out"
             >
               <MdLanguage size={20} />
-            </Link>
-            <Link
-              to="/help"
-              className="text-gray-300 hover:text-white transition-colors duration-200 ease-in-out"
-            >
-              <IoIosHelpCircleOutline size={20} />
             </Link>
           </div>
 
@@ -147,16 +148,16 @@ const NavbarComponent = () => {
               Shop
             </Link>
             <Link
-              to="/experience"
+              to="/about"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Experience
+              About
             </Link>
             <Link
-              to="/help"
+              to="/contact"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Help
+              Contact
             </Link>
           </div>
         </div>
