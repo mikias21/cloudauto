@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ProductListComponent = ({title, cars}) => {
+const AvailableProductListComponent = ({cars}) => {
     return (
-        <div className="container mt-16 mx-auto px-4 sm:px-6 lg:px-8">
-            <div>
-                <p className="text-2xl">{title}</p>
-            </div>
+        <div className="container -mt-6 mb-10 mx-auto px-4 sm:px-6 lg:px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {cars.map((car, index) => (
-                    <div key={index} className="max-w-sm bg-white p-6 rounded-sm shadow-sm">
+                    <div key={index} className="max-w-sm lg:w-[290px] bg-white p-6 rounded-sm shadow-sm">
                         <img
                             src={car.image}
                             alt={car.shortName}
@@ -67,4 +64,4 @@ const ProductListComponent = ({title, cars}) => {
     );
 };
 
-export default ProductListComponent;
+export default AvailableProductListComponent;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // data
-import stories from "../../../../../data/carStories";
+import stories from "../../../../data/carStories";
 
 import React from 'react';
 

@@ -1,27 +1,48 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-// Icons
 import { MdLanguage } from "react-icons/md";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isShopHovered, setIsShopHovered] = useState(false);
+  const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsDropdownActive(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownActive(false);
+    }, 300);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const shopSublinks = [
-    { name: "EV", image: "/images/webp/ev1.webp" },
-    { name: "SUV", image: "/images/webp/suv1.webp" },
-    { name: "Truck", image: "/images/webp/truck1.webp" },
-    { name: "Sedan", image: "/images/webp/sedan1.webp" },
-    { name: "Hybrid", image: "/images/webp/hybrid1.webp" },
+    { name: "offers", image: "/images/webp/ev1.webp", label: "Current Offers" },
+    { name: "available", image: "/images/webp/suv1.webp", label: "Available Cars" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isShopHovered ? 'h-56' : 'h-16'}`}>
+    <nav className={`w-full z-50 transition-all duration-300 ease-in-out ${isDropdownActive ? 'h-56' : 'h-16'}`}>
       <div className="w-full h-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col justify-between bg-transparent hover:bg-[#111] bg-gradient-to-b from-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
         <div className="flex justify-between items-center">
           <div className="text-white text-2xl font-bold font-satisfy">
@@ -39,8 +60,9 @@ const NavbarComponent = () => {
             </div>
             <div
               className="relative"
-              onMouseEnter={() => setIsShopHovered(true)}
-              onMouseLeave={() => setIsShopHovered(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              ref={dropdownRef}
             >
               <Link
                 to="#"
@@ -48,22 +70,22 @@ const NavbarComponent = () => {
               >
                 Shop
               </Link>
-              {isShopHovered && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max bg-[#111] rounded-lg shadow-lg p-4">
+              {isDropdownActive && (
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-10 w-max bg-transparent">
                   <div className="flex justify-center space-x-8">
                     {shopSublinks.map((sublink, index) => (
                       <Link
                         key={index}
-                        to={`/shop/${sublink.name.toLowerCase()}`}
-                        className="flex flex-col items-center"
+                        to={`/${sublink.name.toLowerCase()}`}
+                        className="flex flex-col items-center group"
                       >
                         <img
                           src={sublink.image}
                           alt={sublink.name}
-                          className="w-32 h-20 object-cover mb-1 rounded-md"
+                          className="w-32 h-20 object-cover mb-1 rounded-md transition-transform duration-200 group-hover:scale-105"
                         />
-                        <span className="text-gray-300 hover:text-white text-xs transition-colors duration-200 ease-in-out font-railway">
-                          {sublink.name}
+                        <span className="text-gray-300 group-hover:text-white text-xs transition-colors duration-200 ease-in-out font-railway">
+                          {sublink.label}
                         </span>
                       </Link>
                     ))}

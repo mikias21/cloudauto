@@ -1,15 +1,15 @@
 import NoticeComponent from "./components/NoticeComponent";
 import StoriesComponent from "./components/StoriesComponent";
-import FooterComponent from "../../../components/FooterComponent";
-import NavbarComponent from "../../../components/NavbarComponent";
+import FooterComponent from "../../components/FooterComponent";
+import NavbarComponent from "../../components/NavbarComponent";
+import SendOfferComponent from "../../components/SendOfferComponent";
 import CurrentOfferComponent from "./components/CurrentOfferComponent";
-import SendOfferComponent from "../../../components/SendOfferComponent";
-import ProductListComponent from "../../../components/ProductListComponent";
+import ProductListComponent from "../../components/ProductListComponent";
 
 // data
-import cars from "../../../data/cars1";
+import cars from "../../data/cars1";
 
-const EvShop = () => {
+const OffersPage = () => {
     return (
         <div className="bg-[#E4DFD4] min-h-screen">
             <NavbarComponent />
@@ -25,4 +25,4 @@ const EvShop = () => {
     );
 };
 
-export default EvShop;
+export default OffersPage;
