@@ -6,7 +6,7 @@ const LocationStoreComponent = () => {
             <div className="relative flex flex-col items-start">
                 <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] overflow-hidden rounded-lg">
                     <img
-                        src="/images/offer1.jpg"
+                        src="/images/new_images/offer1.jpeg"
                         alt="Current Offers"
                         className="w-full h-full rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-110 object-cover"
                     />
@@ -25,7 +25,7 @@ const LocationStoreComponent = () => {
             <div className="relative flex flex-col items-start">
                 <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] overflow-hidden rounded-lg">
                     <img
-                        src="/images/loc1.jpg"
+                        src="/images/new_images/location1.webp"
                         alt="Location"
                         className="w-full h-full rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-110 object-cover"
                     />
@@ -33,7 +33,7 @@ const LocationStoreComponent = () => {
                 <div className="mt-4 text-left">
                     <h2 className="text-lg sm:text-xl md:text-2xl font-popins text-white mb-3">Location</h2>
                     <Link
-                        to="/location"
+                        to="/about"
                         className="text-slate-200 hover:text-gray-400 transition-all text-sm sm:text-md font-railway"
                     >
                         Explore Location

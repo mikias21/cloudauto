@@ -9,29 +9,24 @@ const FooterComponent = () => {
                     <div>
                         <h2 className="text-xl font-semibold mb-4">Explore Auto Cloud</h2>
                         <ul className="space-y-3">
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Pure</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Touring</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Grand Touring</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Sapphire</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Design Yours</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Available Cars</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Test Drive</Link></li>
+                            <li><Link to="/available" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Pure</Link></li>
+                            <li><Link to="/about" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Touring</Link></li>
+                            <li><Link to="/available" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Sapphire</Link></li>
+                            <li><Link to="/available" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Available Cars</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Test Drive</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h2 className="text-xl font-semibold mb-4">More</h2>
                         <ul className="space-y-3">
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Ownership</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Referral Program</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Accessories & Lifestyle</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">FAQ</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Contact Us</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Locations</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Events</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Media Room</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Awards & Accolades</Link></li>
-                            <li><Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Knowledge Center</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Ownership</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Referral Program</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Accessories & Lifestyle</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">FAQ</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Contact Us</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Locations</Link></li>
+                            <li><Link to="/contact" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Events</Link></li>
                         </ul>
                     </div>
 

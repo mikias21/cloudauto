@@ -13,7 +13,7 @@ const StoriesComponent = () => {
                             <img
                                 src={story.image}
                                 alt={story.title}
-                                className="w-full h-40 sm:h-56 object-cover transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                className="w-full object-cover h-40 sm:h-56  transition-transform duration-500 ease-in-out transform hover:scale-110"
                             />
                         </div>
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { sectionContent } from '../../data/about';
 
 const AboutUsComponent = () => {
-    const [activeSection, setActiveSection] = useState('About Us');
+    const [activeSection, setActiveSection] = useState('Nationwide Cooperation');
     const [fadeIn, setFadeIn] = useState(true);
 
     const handleSectionChange = (section) => {
@@ -18,11 +18,11 @@ const AboutUsComponent = () => {
     return (
         <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-4 py-10 lg:px-6">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-6 mt-24 md:mt-32 font-kaushan">
-                The Ultimate Electric Car Experience
+                Drive with Confidence, Choose Quality
             </h1>
 
             <p className="text-base md:text-lg lg:text-2xl text-center mb-8 mt-5 lg:mt-7 font-popins">
-                Expertly crafted for drivers who demand innovation.
+                Bringing you top-tier vehicles with unmatched reliability and service.
             </p>
 
             <div className="flex flex-wrap justify-center space-x-4 mb-8 mt-6 lg:mt-10">
@@ -61,7 +61,7 @@ const AboutUsComponent = () => {
                             {sectionContent[activeSection].description}
                         </p>
                         <Link
-                            to={sectionContent[activeSection].linkText}
+                            to="/about"
                             className="text-sm md:text-md text-blue-400 hover:text-blue-300 transition-all mt-4"
                         >
                             {sectionContent[activeSection].linkText}
@@ -77,7 +77,7 @@ const AboutUsComponent = () => {
                         {sectionContent[activeSection].description}
                     </p>
                     <Link
-                        to={sectionContent[activeSection].linkText}
+                        to="/about"
                         className="text-sm md:text-md lg:text-lg text-slate-500 hover:text-slate-800 transition-all font-railway"
                     >
                         {sectionContent[activeSection].linkText}

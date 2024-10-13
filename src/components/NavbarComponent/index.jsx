@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MdLanguage } from "react-icons/md";
+import { MdLanguage} from "react-icons/md";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const [isLangDropdownActive, setIsLangDropdownActive] = useState(false);
   const dropdownRef = useRef(null);
   const timeoutRef = useRef(null);
+  const langDropdownRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -23,6 +25,10 @@ const NavbarComponent = () => {
     }, 300);
   };
 
+  const toggleLangDropdown = () => {
+    setIsLangDropdownActive(!isLangDropdownActive);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -37,12 +43,12 @@ const NavbarComponent = () => {
   }, []);
 
   const shopSublinks = [
-    { name: "offers", image: "/images/webp/ev1.webp", label: "Current Offers" },
-    { name: "available", image: "/images/webp/suv1.webp", label: "Available Cars" },
+    { name: "offers", image: "/images/new_images/navbar1.png", label: "Current Offers" },
+    { name: "available", image: "/images/new_images/navbar2.png", label: "Available Cars" },
   ];
 
   return (
-    <nav className={`w-full z-50 transition-all duration-300 ease-in-out ${isDropdownActive ? 'h-56' : 'h-16'}`}>
+    <nav className={`w-full z-50 transition-all duration-300 ease-in-out ${isDropdownActive ? 'md:h-56' : 'h-auto md:h-16'}`}>
       <div className="w-full h-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col justify-between bg-transparent hover:bg-[#111] bg-gradient-to-b from-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
         <div className="flex justify-between items-center">
           <div className="text-white text-2xl font-bold font-satisfy">
@@ -72,19 +78,19 @@ const NavbarComponent = () => {
               </Link>
               {isDropdownActive && (
                 <div className="absolute left-1/2 transform -translate-x-1/2 mt-10 w-max bg-transparent">
-                  <div className="flex justify-center space-x-8">
+                  <div className="flex justify-center space-x-8 ">
                     {shopSublinks.map((sublink, index) => (
                       <Link
                         key={index}
                         to={`/${sublink.name.toLowerCase()}`}
-                        className="flex flex-col items-center group"
+                        className="flex flex-col items-center group border border-zinc-100 p-1 rounded-md"
                       >
                         <img
                           src={sublink.image}
                           alt={sublink.name}
-                          className="w-32 h-20 object-cover mb-1 rounded-md transition-transform duration-200 group-hover:scale-105"
+                          className="w-32 h-20 m-1 rounded-md transition-transform duration-200 group-hover:scale-105"
                         />
-                        <span className="text-gray-300 group-hover:text-white text-xs transition-colors duration-200 ease-in-out font-railway">
+                        <span className="text-gray-300 mb-2 group-hover:text-white text-xs transition-colors duration-200 ease-in-out font-railway">
                           {sublink.label}
                         </span>
                       </Link>
@@ -111,16 +117,25 @@ const NavbarComponent = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex space-x-4">
-            <Link
-              to="/help"
-              className="text-gray-300 hover:text-white transition-colors duration-200 ease-in-out"
+          <div className="hidden md:flex space-x-4 relative" ref={langDropdownRef}>
+            <button
+              onClick={toggleLangDropdown}
+              className="flex items-center text-gray-300 hover:text-white transition-colors duration-200 ease-in-out"
             >
               <MdLanguage size={20} />
-            </Link>
+            </button>
+            {isLangDropdownActive && (
+              <div className="absolute right-0 mt-8 w-32 bg-[#111] rounded-lg shadow-lg z-50">
+                <div className="py-1">
+                  <Link to="#" className="font-railway block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">English</Link>
+                  <Link to="#" className="font-railway block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Chinese</Link>
+                  <Link to="#" className="font-railway block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Russian</Link>
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="-mr-2 flex md:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
