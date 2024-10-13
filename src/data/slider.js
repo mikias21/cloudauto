@@ -1,8 +1,8 @@
 const images = [
-    { src: "/images/new_images/slider1.jpg", description: "This is car 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam." },
-    { src: "/images/new_images/slider2.jpg", description: "This is car 2. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed." },
-    { src: "/images/new_images/slider3.jpg", description: "This is car 3. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam." },
-    { src: "/images/new_images/slider4.jpg", description: "This is car 3. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam." },
+    { src: "/images/new_images/slider1.jpg", description: "This car blends power and precision, making every drive feel like a thrill ride on four wheels." },
+    { src: "/images/new_images/slider2.jpg", description: "Designed to turn heads and handle curves, it's where luxury meets adrenaline." },
+    { src: "/images/new_images/slider3.jpg", description: "Fuel-efficient meets fierce—this car proves that style and sustainability can go hand in hand." },
+    { src: "/images/new_images/slider4.jpg", description: "With comfort that hugs you and tech that wows you, this car makes even traffic jams enjoyable." },
 ];
 
 export {images};
