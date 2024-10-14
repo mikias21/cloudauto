@@ -3,7 +3,7 @@ const HeroComponent = () => {
     <div className="relative w-full h-[35rem] lg:h-[40rem]">
       <img
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/images/loc1.jpg"
+        src="/images/new_images/abmain.jpg"
         alt="PROMO"
       />
 
@@ -12,7 +12,7 @@ const HeroComponent = () => {
       <div className="relative z-10 flex flex-col h-full px-4 sm:px-8 md:px-16">
         <div className="mt-40 sm:mt-48 md:mt-56 lg:mt-64">
           <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-popins text-center">
-            Cloud Auto
+            Xi'an Yunche Technology
           </h1>
         </div>
       </div>

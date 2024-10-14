@@ -1,3 +1,4 @@
+import MapComponent from "./components/MapComponent";
 import FooterComponent from "../../components/FooterComponent";
 import NavbarComponent from "../../components/NavbarComponent";
 import ContactsComponent from "./components/ContactsComponent";
@@ -8,6 +9,7 @@ const Contact = () => {
         <div>
             <NavbarComponent />
             <ContactsComponent />
+            <MapComponent />
             <SendOfferComponent />
             <FooterComponent />
         </div>

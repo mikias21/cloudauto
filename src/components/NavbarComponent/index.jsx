@@ -49,7 +49,7 @@ const NavbarComponent = () => {
 
   return (
     <nav className={`w-full z-50 transition-all duration-300 ease-in-out ${isDropdownActive ? 'md:h-56' : 'h-auto md:h-16'}`}>
-      <div className="w-full h-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col justify-between bg-transparent hover:bg-[#111] bg-gradient-to-b from-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
+      <div className="w-full h-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col justify-between bg-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
         <div className="flex justify-between items-center">
           <div className="text-white text-2xl font-bold font-satisfy">
             Cloud Auto
