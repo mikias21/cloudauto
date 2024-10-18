@@ -7,10 +7,13 @@ import OffersPage from "./pages/Offers";
 import LandingPage from "./pages/Landing";
 import CarDetailsPage from "./pages/CarDetails";
 import AvailableCarsPage from "./pages/AvailableCars";
+// Component
+import ScrollToTopComponent from "./components/ScrollToTopComponent";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTopComponent />
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/" element={<LandingPage />}/>

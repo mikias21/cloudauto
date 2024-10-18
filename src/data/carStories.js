@@ -1,18 +1,18 @@
 const stories = [
     {
-        "image": "/images/ss1.jpg",
-        "title": "Closer than you think",
-        "exp": "Starting now from $69,900, the award-winning Air line-up brings sustainable luxury within reach."
+        "image": "/images/official/st1.jpg",
+        "title": "Within Your Reach",
+        "exp": "Starting at $69,900, our flagship series brings eco-conscious luxury to your doorstep, blending innovation and style effortlessly."
     },
     {
-        "image": "/images/ss2.jpg",
-        "title": "Elegance in Motion",
-        "exp": "Experience pure driving pleasure starting from $89,500. The Air series combines performance and luxury like never before."
+        "image": "/images/official/ab5.jpg",
+        "title": "Crafted for the Future",
+        "exp": "Beginning at $89,500, redefine your drive with a fusion of advanced engineering and timeless elegance."
     },
     {
-        "image": "/images/ss3.jpg",
-        "title": "Designed for Tomorrow",
-        "exp": "Starting at $79,200, the future of automotive luxury is here. The Air range redefines elegance and sustainability."
+        "image": "/images/official/st2.jpg",
+        "title": "Refined Performance",
+        "exp": "At $79,200, experience unparalleled refinement, where every detail speaks to the future of sustainable performance."
     }
 ]
 

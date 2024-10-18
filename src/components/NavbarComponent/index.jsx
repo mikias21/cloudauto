@@ -49,13 +49,21 @@ const NavbarComponent = () => {
 
   return (
     <nav className={`w-full z-50 transition-all duration-300 ease-in-out ${isDropdownActive ? 'md:h-56' : 'h-auto md:h-16'}`}>
-      <div className="w-full h-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col justify-between bg-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
-        <div className="flex justify-between items-center">
-          <div className="text-white text-2xl font-bold font-satisfy">
-            Cloud Auto
+      <div className="w-full h-full px-4 sm:px-6 lg:px-8 -mt-2 flex flex-col justify-between bg-[#111] to-opacity-50 transition-colors duration-300 ease-in-out">
+        <div className="flex justify-evenly items-center">
+          <div className="text-white text-base mr-4 font-bold font-kaushan">
+            Xi'an cloud car technology
           </div>
 
-          <div className="hidden md:flex flex-grow justify-center space-x-8">
+          <div className="">
+            <img 
+              src="/images/logo3.png" 
+              alt="Cloud Auto Logo" 
+              className="h-20 w-auto" 
+            />
+          </div>
+
+          <div className="hidden md:flex flex-grow justify-center items-center space-x-8">
             <div>
               <Link
                 to="/"
@@ -77,7 +85,7 @@ const NavbarComponent = () => {
                 Shop
               </Link>
               {isDropdownActive && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-10 w-max bg-transparent">
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max bg-transparent">
                   <div className="flex justify-center space-x-8 ">
                     {shopSublinks.map((sublink, index) => (
                       <Link

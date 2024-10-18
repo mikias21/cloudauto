@@ -10,44 +10,17 @@ const ProductListComponent = ({title, cars}) => {
                 {cars.map((car, index) => (
                     <div key={index} className="max-w-sm bg-white p-6 rounded-sm shadow-sm">
                         <img
-                            src={car.image}
-                            alt={car.shortName}
+                            src={car.image_url}
+                            alt={car.title}
                             className="w-full h-32 rounded-lg object-contain"
                         />
-
-                        <p className="font-popins text-3xl text-center mt-3 mb-3">
-                            {car.shortName}
+                        <p className="font-popins text-xl text-center mt-3 mb-3">
+                            {car.title}
                         </p>
-
-                        <div className="flex justify-stretch items-start pt-4">
-                            <div className="text-center">
-                                <p className="font-semibold text-base font-railway">Lease</p>
-                                <p className="text-xs text-gray-400 font-railway">
-                                    {car.lease.time}
-                                </p>
-                                <p className="text-3xl font-bold mt-2">${car.lease.amount}</p>
-                                <p className="text-xs text-gray-400 font-popins mt-1">
-                                    {car.lease.routine}
-                                </p>
-                                <p className="text-xs text-gray-400 font-popins mt-7">Including</p>
-                                <p className="text-lg font-semibold">${car.lease.include_amount}</p>
-                                {car.lease.include_comment.map((comment, i) => (
-                                    <p key={i} className="text-xs text-gray-400 font-popins">
-                                        {comment}
-                                    </p>
-                                ))}
-                            </div>
-
-                            <div className="border-l h-24 mt-7 border-gray-200 mx-auto"></div>
-
-                            <div className="text-center">
-                                <p className="font-semibold text-base">Finance</p>
-                                <p className="text-xs text-gray-400">{car.finance.currency}</p>
-                                <p className="text-3xl font-bold mt-2">{car.finance.amount}%</p>
-                                <p className="text-xs text-gray-400 mt-1">{car.finance.rate}</p>
-                                <p className="text-xs text-gray-400 mt-7">Plus</p>
-                                <p className="text-lg font-semibold">${car.finance.plus_amount}</p>
-                                <p className="text-xs text-gray-400">{car.finance.include_comment}</p>
+                        <div>
+                            <div>
+                                <p className="text-base font-bold mt-2">{car.price}</p>
+                                <p className="text-xs text-gray-400 font-popins mt-3">{car.description}</p>
                             </div>
                         </div>
 

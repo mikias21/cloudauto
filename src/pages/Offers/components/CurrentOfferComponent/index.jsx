@@ -8,12 +8,12 @@ const CurrentOfferComponent = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-between mt-8 sm:mt-12 lg:mt-16 gap-6 sm:gap-8 lg:gap-12">
                 <OfferCard
-                    title="Up to $5,000 On-Site Vehicle Bonus"
-                    description="For a limited time, up to $5,000 bonus offer is for vehicles available on-site at the time of order¹. Must take delivery by September 30th, 2024."
+                    title="Save up to $4,500 on Your Next Vehicle"
+                    description="For a limited time, enjoy up to $4,500 off select vehicles in stock. Offer applies to purchases made before October 31st, 2024, with immediate delivery."
                 />
                 <OfferCard
-                    title="Up to $5,000 On-Site Vehicle Bonus"
-                    description="For a limited time, up to $5,000 bonus offer is for vehicles available on-site at the time of order¹. Must take delivery by September 30th, 2024."
+                    title="Get $3,000 Off Instantly on Select Models"
+                    description="Limited-time offer! Receive $3,000 off on select models when you purchase and take delivery by November 15th, 2024. Don’t miss out on this exclusive deal!"
                 />
             </div>
         </div>

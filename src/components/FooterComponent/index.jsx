@@ -52,7 +52,7 @@ const FooterComponent = () => {
                 <hr className="my-8 border-gray-300" />
 
                 <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-                    <p className="text-sm text-gray-600">©2024 Auto Cloud. All rights reserved</p>
+                    <p className="text-sm text-gray-600">©2024 Xi'an cloud car technology. All rights reserved</p>
                     <div className="flex space-x-6 text-sm">
                         <Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Legal</Link>
                         <Link to="#" className="hover:underline hover:text-gray-600 transition duration-300 ease-in-out">Privacy Policy</Link>

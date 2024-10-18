@@ -10,13 +10,12 @@ const StoriesComponent = () => {
         <div className="bg-[#F0F0F0] w-full mt-16 h-auto">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div>
-                    <p className="font-popins text-3xl sm:text-4xl lg:text-5xl font-semibold text-center pt-14">Accelerating the EV Experience</p>
+                    <p className="font-popins text-3xl sm:text-4xl lg:text-5xl font-semibold text-center pt-14">Driving the Future of Electric Mobility</p>
                 </div>
                 <div>
                     <p className="text-center font-railway w-full sm:w-3/4 lg:w-1/2 mx-auto mt-7">
-                        Cloud Auto, China's most awarded new luxury vehicle, starting now from $69,900 including 
-                        $1,000 Charging Allowance and two years of complimentary Cloud Auto's scheduled maintenance 
-                        with purchase or lease.
+                    Experience the pinnacle of luxury with Cloud Auto, now starting at $69,900. Enjoy a $1,000 
+                    Charging Bonus and two years of complimentary scheduled maintenance when you purchase or lease today.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 pb-14">

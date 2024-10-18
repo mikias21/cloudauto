@@ -4,7 +4,7 @@ import NavbarComponent from "../../components/NavbarComponent";
 import AvailableProductListComponent from "../../components/AvailableProductListComponent";
 
 // data
-import cars from "../../data/cars1";
+import cars from "../../data/cars_main";
 
 const AvailableCarsPage = () => {
     return (
